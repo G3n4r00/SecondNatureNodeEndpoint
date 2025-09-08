@@ -23,7 +23,7 @@ db.run(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome TEXT NOT NULL,
     ultimo_nome TEXT NOT NULL,
-    email TEXT UNIQUE NOT NULL,
+    email TEXT NOT NULL,
     celular TEXT NOT NULL,
     UF TEXT NOT NULL,
     cpf TEXT NOT NULL,
