@@ -46,7 +46,7 @@ app.post("/users", (req, res) => {
 
   const sql = `
     INSERT INTO USERS (nome, ultimo_nome, email, celular, UF, cpf, dt_nasc, genero, profissao)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   db.run(sql, [nome, ultimo_nome, email, celular, UF, cpf, dt_nasc, genero, profissao], function (err) {
