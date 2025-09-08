@@ -26,6 +26,7 @@ db.run(`
     nome TEXT NOT NULL,
     ultimo_nome TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
+    celular TEXT NOT NULL,
     UF TEXT NOT NULL,
     cpf TEXT NOT NULL,
     dt_nasc TEXT,
@@ -37,18 +38,18 @@ db.run(`
 
 //Insert user
 app.post("/users", (req, res) => {
-  const { nome, ultimo_nome, email, UF, cpf, dt_nasc, genero, profissao } = req.body;
+  const { nome, ultimo_nome, email, celular, UF, cpf, dt_nasc, genero, profissao } = req.body;
 
   if (!nome || !ultimo_nome || !email || !UF || !cpf) {
-    return res.status(400).json({ error: "nome, ultimo_nome, email, UF and cpf são necessários" });
+    return res.status(400).json({ error: "nome, ultimo_nome, email, celular, UF and cpf são necessários" });
   }
 
   const sql = `
-    INSERT INTO USERS (nome, ultimo_nome, email, UF, cpf, dt_nasc, genero, profissao)
+    INSERT INTO USERS (nome, ultimo_nome, email, celular, UF, cpf, dt_nasc, genero, profissao)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
-  db.run(sql, [nome, ultimo_nome, email, UF, cpf, dt_nasc, genero, profissao], function (err) {
+  db.run(sql, [nome, ultimo_nome, email, celular, UF, cpf, dt_nasc, genero, profissao], function (err) {
     if (err) {
       console.error("Erro ao inserir usuário:", err.message);
       return res.status(500).json({ error: err.message });
@@ -58,6 +59,7 @@ app.post("/users", (req, res) => {
       nome,
       ultimo_nome,
       email,
+      celular,
       UF,
       cpf,
       dt_nasc,
