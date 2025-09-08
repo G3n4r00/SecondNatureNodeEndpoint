@@ -17,8 +17,6 @@ const db = new sqlite3.Database(dbPath, (err) => {
   }
 });
 
-db.run(`DROP TABLE USERS`)
-
 // Create USERS se nao existir
 db.run(`
   CREATE TABLE IF NOT EXISTS USERS (
