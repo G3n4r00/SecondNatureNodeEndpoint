@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE="nouchka/sqlite3"
+IMAGE="mysql-image"
 DB="/var/lib/sqlite/mydb.sqlite"
 
 docker run --rm -v $(dirname $DB):/db $IMAGE sqlite3 /db/$(basename $DB) -cmd "
