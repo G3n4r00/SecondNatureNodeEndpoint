@@ -14,4 +14,4 @@ SET cpf = '******' || substr(cpf, 7, 3),
 "
 
 # Roda o container, monta o volume, executa o SQL e remove o container após execução
-docker run --rm -v $(dirname $DB_PATH):/db $IMAGE sqlite3 /db/$(basename $DB_PATH) "$SQL_CMD"
+docker run --rm -v $(dirname $DB):/db $IMAGE sqlite3 /db/$(basename $DB) "$SQL_CMD"
