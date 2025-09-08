@@ -63,6 +63,17 @@ app.post("/users", (req, res) => {
   });
 });
 
+// GET all users
+app.get("/users", (req, res) => {
+  const sql = "SELECT * FROM USERS";
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error("Error fetching users:", err.message);
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(rows);
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
