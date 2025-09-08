@@ -5,7 +5,7 @@ IMAGE="nouchka/sqlite3"
 
 DB="/var/lib/sqlite/mydb.sqlite"
 
-sqlite3 $DB "
+SQL_CMD="
 UPDATE usuarios
 SET cpf = '******' || substr(cpf, 7, 3),
     sobrenome = substr(sobrenome, 1, 1) || '*****',
