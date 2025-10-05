@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Caminhos
-LOG_FILE="/var/log/my-app/xp_anonymization.log"
+LOG_FILE="/var/log/SecondNatureLogs/xp_anonymization.log"
 DB="/var/lib/sqlite/mydb.sqlite"
 IMAGE="sqlite" 
 

@@ -11,9 +11,9 @@ app.use(express.json({ limit: '5mb' }));
 // =================================================================
 // 1. Parte Logger
 // =================================================================
-const logDirectory = '/var/log/my-app';
+const logDirectory = '/var/log/SecondNatureLogs';
 
-// Garantir que o arquivo de log realmente existe
+// Garantir que o diretorio de log realmente existe
 if (!fs.existsSync(logDirectory)) {
     try {
         fs.mkdirSync(logDirectory, { recursive: true });
