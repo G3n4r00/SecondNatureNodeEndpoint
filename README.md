@@ -63,23 +63,12 @@ O arquivo físico do banco é montado via volume persistente para garantir acess
 A API foi desenvolvida com Node.js (Express) e é gerenciada via PM2, garantindo persistência e reinicialização automática.
 O arquivo principal é index.js.
 
-Endpoints Implementados
-POST /api/users
-
-Recebe dados de usuários e os insere no banco SQLite.
-Além da inserção, um log operacional é gerado em xp_operations.log.
-
-GET /api/users
-
-Retorna todos os registros existentes na tabela USERS.
-
-POST /api/logs
-
-Recebe logs de acesso e operação enviados pela aplicação e os grava nos diretórios de log configurados:
-
-/var/log/SecondNatureLogs/xp_access.log
-
-/var/log/SecondNatureLogs/xp_operations.log
+### Endpoints
+- `GET /api/users`
+- `POST /api/users`
+- `GET /api/users/:id`
+- `PUT /api/users/:id`
+- `DELETE /api/users/:id`
 
 Logs do Servidor
 
