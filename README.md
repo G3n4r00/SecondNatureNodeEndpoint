@@ -1,11 +1,3 @@
-# Integrantes 
-
-Gabriel Genaro Dalaqua RM551986
-Arthur Baldissera Claumann Marcos RM550219
-Paloma Mirela dos Santos Rodrigues RM551321
-Ricardo Ramos Vergani RM550166
-Victor Kenzo Toma RM551649
-
 # SecondNature — Projeto de Servidor Linux com Docker, SQLite e Node.js
 
 ## 🧱 Visão Geral do Projeto
@@ -134,3 +126,37 @@ Permissão de execução do script anonimizar.sh.
 Controle da API Node.js via PM2.
 
 As permissões garantem que apenas esse usuário possa manipular logs e scripts de automação, reforçando a segurança e integridade do sistema.
+
+## Integrantes
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>RM</th>
+    <th>Turma</th>
+  </tr>
+  <tr>
+    <td>Arthur Baldissera Claumann Marcos</td>
+    <td>550219</td>
+    <td>3ESPF</td>
+  </tr>
+  <tr>
+    <td>Gabriel Genaro Dalaqua</td>
+    <td>551986</td>
+    <td>3ESPF</td>
+  </tr>
+  <tr>
+    <td>Paloma Mirela dos Santos Rodrigues</td>
+    <td>551321</td>
+    <td>3ESPF</td>
+  </tr>
+  <tr>
+    <td>Ricardo Ramos Vergani</td>
+    <td>550166</td>
+    <td>3ESPF</td>
+  </tr>
+  <tr>
+    <td>Victor Kenzo Toma</td>
+    <td>551649</td>
+    <td>3ESPF</td>
+  </tr>
+</table>
